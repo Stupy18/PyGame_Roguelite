@@ -3,6 +3,7 @@ import random
 from PythonFiles.Player import Player
 from PythonFiles.Enemy import Enemy
 from PythonFiles.Bullet import Bullet
+from pygame_functions import *
 
 class Game:
     def __init__(self):
@@ -10,8 +11,9 @@ class Game:
         self.SCREEN_WIDTH, self.SCREEN_HEIGHT = 1280, 720
         self.screen = pygame.display.set_mode((self.SCREEN_WIDTH, self.SCREEN_HEIGHT))
         pygame.display.set_caption("Roguelite Game")
+        # setBackgroundImage('E:\Probabilitati\Joc\linii.jpg')
 
-        self.bullet_cooldown = 1000  # Cooldown time in milliseconds
+        self.bullet_cooldown = 700  # Cooldown time in milliseconds
         self.last_bullet_time = pygame.time.get_ticks()
 
         self.FPS = 60

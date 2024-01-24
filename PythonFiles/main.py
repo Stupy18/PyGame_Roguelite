@@ -1,4 +1,5 @@
 import pygame
+from pygame_functions import *
 import random
 import math
 from PythonFiles.Button import Button

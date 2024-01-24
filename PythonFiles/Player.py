@@ -1,3 +1,5 @@
+from PythonFiles.pygame_functions import makeSprite
+
 SCREEN_WIDTH, SCREEN_HEIGHT = 1280, 720
 # Define colors
 WHITE = (255, 255, 255)
@@ -21,11 +23,12 @@ class Player:
         self.level = 1
         self.kills = 0  # Number of enemy kills
         self.sprite = pygame.image.load("E:\Probabilitati\Joc\stupy.png").convert_alpha()
+        # self.sprite = makeSprite("E:\Probabilitati\Joc\stupy.png")
         self.sprite = pygame.transform.scale(self.sprite, (70, 90))
         self.enemy_respawn_rate = 1
         self.bullet_speed_multiplier = 0.8
         self.bullet_damage = 1
-        self.double_bullets = True
+        self.double_bullets = False
         self.required_exp = 100
 
     def draw(self):
